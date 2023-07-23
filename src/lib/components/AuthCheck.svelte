@@ -5,8 +5,8 @@
 {#if $currentUser}
     <slot />
 {:else}
-    <p class="text-error my-10">
-        You need to login in order to proceed
+    <div class="text-error my-10">
+        <p class="mb-4">You need to login in order to proceed</p>
         <a href="/login" class="btn btn-primary">Sign in</a>
-    </p>
+    </div>
 {/if}
