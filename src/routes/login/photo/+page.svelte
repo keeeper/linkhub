@@ -17,7 +17,6 @@
     const url = await getDownloadURL(result.ref);
     await updateDoc(doc(db, "users", $currentUser!.uid), {photoURL: url})
     isUploading = false;
-    console.log($userData?.photoUrl)
   }
 </script>
 
