@@ -25,7 +25,7 @@
   <form class="max-w-screen-md w-full mt-10 mb-4">
     <div class="form-control items-center w-full max-w-x mx-auto text-center">
       <img 
-        src={previewURL ?? $userData?.photoUrl ?? "/placeholder.png"}
+        src={previewURL ?? $userData?.photoURL ?? "/placeholder.png"}
         alt={"Profile image"}
         width="120"
         height="120"
