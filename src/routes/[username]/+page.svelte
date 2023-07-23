@@ -31,14 +31,4 @@
       </li>
     {/each}
   </ul>
-  <div class="flex flex-col fixed top-5 right-0">
-      <a href="/" class="btn btn-neutral rounded-r-none mb-2">
-        <img src={`/icons/home.svg`} alt="Home" width={24} height={24}} />
-      </a>
-      {#if $currentUser?.uid}
-        <a href={`/${data.username}/edit`} class="btn btn-neutral rounded-r-none">
-          <img src={`/icons/edit.svg`} alt="Edit" width={24} height={24}} />
-        </a>
-      {/if}
-    </div>
 </main>
