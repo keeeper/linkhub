@@ -1,6 +1,7 @@
 <script lang="ts">
-    import type { PageData } from './$types';
-    export let data: PageData;
+  import type { PageData } from './$types';
+  import UserLink from '$lib/components/UserLink.svelte';
+  export let data: PageData;
 </script>
 
 <svelte:head>
@@ -15,14 +16,19 @@
     src={data.photoURL ?? "/placeholder.png"}
     alt={"PhotoURL"}
     width="120"
-    height="140"
+    height="120"
     class="mx-auto rounded-full"
   />
 
   <p class="text-xl my-8">{data.bio ?? "no bio ..."}</p>
-  <ul>
-    {#each data.links as item}
-      {@debug item}
+  <ul class="list-none p-0 flex flex-col items-center">
+    {#each data.links as item, index}
+      <li
+        class="border-2 border-dashed border-transparent p-2 transition-all max-w-md w-full"
+        data-index={index}
+      >
+        <UserLink {...item} />
+      </li>
     {/each}
   </ul>
 </main>
