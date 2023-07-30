@@ -9,4 +9,4 @@ Social media platform for creating and storing links to all your social profiles
 - DaisyUi
 
 ## Live demo
-soon
+https://yo-linkhub.vercel.app/
